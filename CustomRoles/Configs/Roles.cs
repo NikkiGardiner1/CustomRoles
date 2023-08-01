@@ -64,4 +64,9 @@ public class Roles
     {
         new TankZombie(),
     };
+
+    public List<ContainmentScientist> ContainmentScientists {get; set; } = new()
+    {
+        new ContainmentScientist(),
+    };
 }
