@@ -65,8 +65,16 @@ public class Roles
         new TankZombie(),
     };
 
-    public List<ContainmentScientist> ContainmentScientists {get; set; } = new()
+    public List<ContainmentScientist> ContainmentScientists { get; set; } = new()
     {
         new ContainmentScientist(),
+    };
+    public List<LightGuard> LightGuards { get; set; } = new()
+    {
+        new LightGuard(),
+    };
+    public List<Biochemist> Biochemists { get; set; } = new()
+    {
+        new Biochemist(),
     };
 }

@@ -1,4 +1,4 @@
-﻿namespace CustomRoles.Roles;
+namespace CustomRoles.Roles;
 
 using CustomRoles.API;
 
@@ -13,24 +13,24 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CustomRole(RoleTypeId.None)]
-public class ContainmentScientist : CustomRole, ICustomRole
+public class LightGuard : CustomRole, ICustomRole
 {
-    public int Chance { get; set; } = 100;
+    public int Chance { get; set; } = 15;
 
-    public StartTeam StartTeam { get; set; } = StartTeam.Scientist;
+    public StartTeam StartTeam { get; set; } = StartTeam.Guard;
 
-    public override uint Id { get; set; } = 30;
+    public override uint Id { get; set; } = 31;
 
-    public override RoleTypeId Role { get; set; } = RoleTypeId.None;
+    public override RoleTypeId Role { get; set; } = RoleTypeId.FacilityGuard;
 
     public override int MaxHealth { get; set; } = 100;
 
-    public override string Name { get; set; } = "Containment Engineer Scientist";
+    public override string Name { get; set; } = "Protocol Enforcer";
 
     public override string Description { get; set; } =
-        "A scientist that starts in heavy containment, with a different loadout";
+        "A guard that is meant to keep D-Class in line. Starts in light containment but with no strong weaponry";
 
-    public override string CustomInfo { get; set; } = "Containment Engineer Scientist";
+    public override string CustomInfo { get; set; } = "Protocol Enforcer";
 
     public override bool KeepInventoryOnSpawn { get; set; } = false;
 
@@ -45,9 +45,11 @@ public class ContainmentScientist : CustomRole, ICustomRole
 
     public override List<string> Inventory { get; set; } = new()
     {
+        "Silent Serenade",
         ItemType.Medkit.ToString(),
-        ItemType.KeycardContainmentEngineer.ToString(),
-        ItemType.Adrenaline.ToString(),
+        ItemType.KeycardZoneManager.ToString(),
+        ItemType.Painkillers.ToString(),
         ItemType.Radio.ToString(),
+        ItemType.ArmorLight.ToString(),
     };
 }

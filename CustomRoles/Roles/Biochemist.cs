@@ -1,5 +1,6 @@
 ﻿namespace CustomRoles.Roles;
 
+using CustomRoles.Abilities;
 using CustomRoles.API;
 
 using Exiled.API.Features;
@@ -13,24 +14,24 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CustomRole(RoleTypeId.None)]
-public class ContainmentScientist : CustomRole, ICustomRole
+public class Biochemist : CustomRole, ICustomRole
 {
-    public int Chance { get; set; } = 100;
+    public int Chance { get; set; } = 15;
 
     public StartTeam StartTeam { get; set; } = StartTeam.Scientist;
 
-    public override uint Id { get; set; } = 30;
+    public override uint Id { get; set; } = 32;
 
-    public override RoleTypeId Role { get; set; } = RoleTypeId.None;
+    public override RoleTypeId Role { get; set; } = RoleTypeId.Scientist;
 
     public override int MaxHealth { get; set; } = 100;
 
-    public override string Name { get; set; } = "Containment Engineer Scientist";
+    public override string Name { get; set; } = "Biochemist";
 
     public override string Description { get; set; } =
-        "A scientist that starts in heavy containment, with a different loadout";
+        "A scientist that specializes in biological altering. You can passively heal other people and explode on death.";
 
-    public override string CustomInfo { get; set; } = "Containment Engineer Scientist";
+    public override string CustomInfo { get; set; } = "Biochemist";
 
     public override bool KeepInventoryOnSpawn { get; set; } = false;
 
@@ -42,11 +43,14 @@ public class ContainmentScientist : CustomRole, ICustomRole
     {
         Limit = 1,
     };
-
+    public override List<CustomAbility>? CustomAbilities { get; set; } = new()
+    {
+        new HealingMist(),
+        new Martyrdom(),
+    };
     public override List<string> Inventory { get; set; } = new()
     {
         ItemType.Medkit.ToString(),
-        ItemType.KeycardContainmentEngineer.ToString(),
         ItemType.Adrenaline.ToString(),
         ItemType.Radio.ToString(),
     };
