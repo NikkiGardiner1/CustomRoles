@@ -3,6 +3,8 @@
 ## Description
 This plugin makes use of Exiled.CustomRoles to add new playable roles into the game. These roles have custom inventories, health, objectives and abilities.
 
+THIS IS A MODIFICATION TO ADD MORE ROLES, THESE ROLES ARE FOR MY SL SERVER. All credit goes to Joker-119 and the Exiled Team for the orginal CustomRoles plugin.
+
 **All information contained below assumes DEFAULT config values. Keep in mind that just about everything is configurable, the below is meant as an explination of what everything does by default.**
 
 ### Role List
@@ -23,6 +25,8 @@ Chaos Phantom | 10 | ActiveCamo | Immediately when a round begins | A Chaos Cons
 Plague Zombie | 11 | Projectile, MoveSpeedReduction | Randomly when revived by SCP-049 | A slow zombie that does very little melee damage. Projectiles they shoot do not deal immediate damage like normal, instead they will poison any humans hit. Humans who die wile poisoned will turn into an instance of SCP-049-2.
 SCP-575 | 12 | Blackout | Immediately when a round begins | See the 575 section below.
 Juggernaut Zombie | 13 | ReactiveHume, MoveSpeedReduction | Randomly when revived by SCP-049 | A very tanky zombie capable of living through enourmous amounts of damage.
+Containment Engineer | 30 | None | Immediately when a round begins | A Scientist is randomly selected and is set into Enterance Zone with a Containment Engineer Keycard.
+Protocol Enforcer | 31 | None | Immediately when a round begins | A lighter facility guard that spawns in light containment zone. They spawn with a Tranquilizer, Medkit, Painkillers, Radio, Light Armor, and a Zone Manager Keycard.
 
 
 ### Ability List
