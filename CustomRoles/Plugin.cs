@@ -57,6 +57,9 @@ public class Plugin : Plugin<Config>
         Config.RoleConfigs.PdZombies.Register();
         Config.RoleConfigs.PlagueZombies.Register();
         Config.RoleConfigs.TankZombies.Register();
+        Config.RoleConfigs.ContainmentScientists.Register();
+        Config.RoleConfigs.LightGuards.Register();
+        Config.RoleConfigs.Biochemists.Register();
 
         foreach (CustomRole role in CustomRole.Registered)
         {
