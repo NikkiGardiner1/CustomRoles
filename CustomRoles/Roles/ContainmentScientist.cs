@@ -12,7 +12,7 @@ using PlayerRoles;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CustomRole(RoleTypeId.None)]
+[CustomRole(RoleTypeId.Scientist)]
 public class ContainmentScientist : CustomRole, ICustomRole
 {
     public int Chance { get; set; } = 100;
@@ -21,7 +21,7 @@ public class ContainmentScientist : CustomRole, ICustomRole
 
     public override uint Id { get; set; } = 30;
 
-    public override RoleTypeId Role { get; set; } = RoleTypeId.None;
+    public override RoleTypeId Role { get; set; } = RoleTypeId.Scientist;
 
     public override int MaxHealth { get; set; } = 100;
 

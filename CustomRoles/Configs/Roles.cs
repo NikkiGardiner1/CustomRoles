@@ -77,4 +77,16 @@ public class Roles
     {
         new Biochemist(),
     };
+    public List<ContainmentGuard> ContainmentGuards { get; set; } = new()
+    {
+        new ContainmentGuard(),
+    };
+    public List<BorderPatrol> BorderPatrols { get; set; } = new()
+    {
+        new BorderPatrol(),
+    };
+    public List<Nightfall> Nightfalls { get; set; } = new()
+    {
+        new Nightfall(),
+    };
 }

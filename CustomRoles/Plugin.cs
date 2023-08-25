@@ -60,6 +60,9 @@ public class Plugin : Plugin<Config>
         Config.RoleConfigs.ContainmentScientists.Register();
         Config.RoleConfigs.LightGuards.Register();
         Config.RoleConfigs.Biochemists.Register();
+        Config.RoleConfigs.ContainmentGuards.Register();
+        Config.RoleConfigs.BorderPatrols.Register();
+        Config.RoleConfigs.Nightfalls.Register();
 
         foreach (CustomRole role in CustomRole.Registered)
         {
