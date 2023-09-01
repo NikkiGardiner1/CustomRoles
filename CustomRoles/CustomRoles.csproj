@@ -6,8 +6,8 @@
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
         <CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
         <Version>1.0.0</Version>
-        <AssemblyVersion>5.0.5</AssemblyVersion>
-        <FileVersion>5.0.5</FileVersion>
+        <AssemblyVersion>5.0.6</AssemblyVersion>
+        <FileVersion>5.0.6</FileVersion>
         <TargetFramework>net48</TargetFramework>
 		<LangVersion>10</LangVersion>
     </PropertyGroup>
@@ -19,7 +19,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <PackageReference Include="EXILED" Version="7.2.0" />
+      <PackageReference Include="EXILED" Version="8.0.0" />
       <PackageReference Include="Lib.Harmony" Version="2.2.2" />
       <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
         <PrivateAssets>all</PrivateAssets>
