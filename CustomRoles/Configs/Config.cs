@@ -15,13 +15,13 @@ public class Config : IConfig
     public Roles RoleConfigs { get; private set; } = null!;
 
     [Description("Whether or not debug messages shoudl be shown.")]
-    public bool Debug { get; set; } = true;
+    public bool Debug { get; set; } = false;
 
     [Description("The folder path where role configs will be stored.")]
     public string RolesFolder { get; set; } = Path.Combine(Paths.Configs, "CustomRoles");
 
     [Description("The file name to load role configs from.")]
-    public string RolesFile { get; set; } = "global.yml";
+    public string RolesFile { get; set; } = "ViciousVikki.yml";
 
     [Description("Whether or not this plugin is enabled.")]
     public bool IsEnabled { get; set; } = true;
