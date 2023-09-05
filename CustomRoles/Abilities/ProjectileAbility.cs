@@ -55,7 +55,7 @@ public class ProjectileAbility : ActiveAbility
 
             Log.Debug("Spawning pickup");
             Pickup pickup = Pickup.CreateAndSpawn(ItemType.SCP018, player.CameraTransform.position, default);
-            PlagueZombie.Grenades.Add(pickup.Serial);
+            //PlagueZombie.Grenades.Add(pickup.Serial);
             pickup.Scale *= 2f;
             Rigidbody body = pickup.Base.GetComponent<Rigidbody>();
             body.useGravity = false;
@@ -118,7 +118,7 @@ public class ProjectileAbility : ActiveAbility
     {
         ExplosiveGrenade grenade = (ExplosiveGrenade)Item.Create(ItemType.GrenadeHE);
         grenade.FuseTime = 0.5f;
-        PlagueZombie.Grenades.Add(grenade.Serial);
+        //PlagueZombie.Grenades.Add(grenade.Serial);
         grenade.SpawnActive(target);
     }
 }

@@ -25,13 +25,13 @@ public class Plugin : Plugin<Config>
 
     public List<Player> StopRagdollList { get; } = new ();
 
-    public override string Author { get; } = "Galaxy119";
+    public override string Author { get; } = "Vicious Vikki";
 
-    public override string Name { get; } = "CustomRoles";
+    public override string Name { get; } = "SFSCustomRoles";
 
-    public override string Prefix { get; } = "CustomRoles";
+    public override string Prefix { get; } = "SFSCustomRoles";
 
-    public override Version RequiredExiledVersion { get; } = new (8, 0, 0);
+    public override Version RequiredExiledVersion { get; } = new (8, 1, 0);
 
     public Methods Methods { get; private set; } = null!;
 
@@ -45,25 +45,13 @@ public class Plugin : Plugin<Config>
 
         Config.LoadConfigs();
 
-        CustomRole.RegisterRoles(false, Config.RoleConfigs);
-        Config.RoleConfigs.Demolitionists.Register();
-        Config.RoleConfigs.Dwarves.Register();
-        Config.RoleConfigs.Medics.Register();
-        Config.RoleConfigs.Phantoms.Register();
-        Config.RoleConfigs.BallisticZombies.Register();
-        Config.RoleConfigs.BerserkZombies.Register();
-        Config.RoleConfigs.ChargerZombies.Register();
-        Config.RoleConfigs.DwarfZombies.Register();
-        Config.RoleConfigs.MedicZombies.Register();
-        Config.RoleConfigs.PdZombies.Register();
-        Config.RoleConfigs.PlagueZombies.Register();
-        Config.RoleConfigs.TankZombies.Register();
-        Config.RoleConfigs.ContainmentScientists.Register();
+        CustomRole.RegisterRoles(true, Config.RoleConfigs);
+        /*Config.RoleConfigs.ContainmentScientists.Register();
         Config.RoleConfigs.LightGuards.Register();
         Config.RoleConfigs.Biochemists.Register();
         Config.RoleConfigs.ContainmentGuards.Register();
         Config.RoleConfigs.BorderPatrols.Register();
-        Config.RoleConfigs.Nightfalls.Register();
+        Config.RoleConfigs.Nightfalls.Register();*/
 
         foreach (CustomRole role in CustomRole.Registered)
         {
