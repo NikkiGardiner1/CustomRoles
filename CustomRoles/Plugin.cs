@@ -31,7 +31,7 @@ public class Plugin : Plugin<Config>
 
     public override string Prefix { get; } = "SFSCustomRoles";
 
-    public override Version RequiredExiledVersion { get; } = new (8, 1, 0);
+    public override Version RequiredExiledVersion { get; } = new (8, 0, 0);
 
     public Methods Methods { get; private set; } = null!;
 
@@ -45,13 +45,14 @@ public class Plugin : Plugin<Config>
 
         Config.LoadConfigs();
 
-        CustomRole.RegisterRoles(true, Config.RoleConfigs);
-        /*Config.RoleConfigs.ContainmentScientists.Register();
+        Config.RoleConfigs.ContainmentScientists.Register();
         Config.RoleConfigs.LightGuards.Register();
         Config.RoleConfigs.Biochemists.Register();
         Config.RoleConfigs.ContainmentGuards.Register();
         Config.RoleConfigs.BorderPatrols.Register();
-        Config.RoleConfigs.Nightfalls.Register();*/
+        Config.RoleConfigs.Nightfalls.Register();
+        Config.RoleConfigs.A7Chaoss.Register();
+        Config.RoleConfigs.Flippeds.Register();
 
         foreach (CustomRole role in CustomRole.Registered)
         {

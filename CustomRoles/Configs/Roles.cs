@@ -29,4 +29,12 @@ public class Roles
     {
         new Nightfall(),
     };
+    public List<A7Chaos> A7Chaoss { get; set; } = new()
+    {
+        new A7Chaos(),
+    };
+    public List<Flipped> Flippeds { get; set; } = new()
+    {
+        new Flipped(),
+    };
 }
