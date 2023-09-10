@@ -16,5 +16,5 @@ Biochemist| 32 | Healing Mist, Martyrdom | Immediately when a round begins | A S
 Containment Guard | 33 | None | Immediately when a round begins | A Facility Guard specializing in recontaining SCPs
 Border Patrol | 34 | None | Given by Admin Command only | A facility guard specialized in ensuring safe passage from Enterance and Heavy Checkpoints
 Nightfall | 35 | Data Missing | Data Missing | Data Missing
-A7 Chaos | 36 | During a Chaos Insurgency Respawn Wave | A Chaos Member that spawns with an A7
-Flipped | 37 | Given by Admin Command only | For those people who complain about dwarfs when they spawn in as it
+A7 Chaos | 36 | None | During a Chaos Insurgency Respawn Wave | A Chaos Member that spawns with an A7
+Flipped | 37 | None | Given by Admin Command only | For those people who complains about dwarfs when they spawn in as it
