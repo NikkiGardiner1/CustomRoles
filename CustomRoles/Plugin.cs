@@ -53,6 +53,7 @@ public class Plugin : Plugin<Config>
         Config.RoleConfigs.Nightfalls.Register();
         Config.RoleConfigs.A7Chaoss.Register();
         Config.RoleConfigs.Flippeds.Register();
+        Config.RoleConfigs.TelepathicChaos.Register();
 
         foreach (CustomRole role in CustomRole.Registered)
         {

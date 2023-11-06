@@ -37,4 +37,8 @@ public class Roles
     {
         new Flipped(),
     };
+    public List<TelepathicChaos> TelepathicChaos { get; set; } = new()
+    {
+        new TelepathicChaos(),
+    };
 }
