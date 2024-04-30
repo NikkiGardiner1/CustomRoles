@@ -11,6 +11,9 @@
         <TargetFramework>net48</TargetFramework>
 		<LangVersion>10</LangVersion>
     </PropertyGroup>
+    <ItemGroup>
+      <AdditionalFiles Remove="C:\Users\mill3\source\repos\SnivysCustomRoles\CustomRoles\\stylecop.json" />
+    </ItemGroup>
 
     <ItemGroup>
         <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleTo">
@@ -19,18 +22,17 @@
     </ItemGroup>
 
     <ItemGroup>
-      <PackageReference Include="EXILED" Version="8.1.0" />
-      <PackageReference Include="Lib.Harmony" Version="2.2.2" />
-      <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
-        <PrivateAssets>all</PrivateAssets>
-        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-      </PackageReference>
+      <PackageReference Include="EXILED" Version="8.8.1" />
+      <PackageReference Include="Lib.Harmony" Version="2.3.3" />
     </ItemGroup>
 
 
     <ItemGroup>
       <Reference Include="Assembly-CSharp-firstpass">
         <HintPath>$(EXILED_REFERENCES)\Assembly-CSharp-firstpass.dll</HintPath>
+      </Reference>
+      <Reference Include="Assembly-CSharp">
+        <HintPath>$(EXILED_REFERENCES)\Assembly-CSharp-Publicized.dll</HintPath>
       </Reference>
       <Reference Include="Mirror">
         <HintPath>$(EXILED_REFERENCES)\Mirror.dll</HintPath>

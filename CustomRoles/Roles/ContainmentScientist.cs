@@ -6,6 +6,8 @@ using Exiled.API.Features;
 using Exiled.API.Features.Attributes;
 using Exiled.API.Features.Spawn;
 using Exiled.CustomRoles.API.Features;
+using Exiled.Events.EventArgs.Player;
+using Exiled.Events.Handlers;
 
 using MEC;
 using PlayerRoles;
@@ -50,4 +52,28 @@ public class ContainmentScientist : CustomRole, ICustomRole
         ItemType.Adrenaline.ToString(),
         ItemType.Radio.ToString(),
     };
+
+    protected override void SubscribeEvents()
+    {
+        Exiled.Events.Handlers.Player.Escaping += OnEscaping;
+        base.SubscribeEvents();
+    }
+
+    protected override void UnsubscribeEvents()
+    {
+        Exiled.Events.Handlers.Player.Escaping -= OnEscaping;
+        base.UnsubscribeEvents();
+    }
+
+    private void OnEscaping(EscapingEventArgs ev)
+    {
+        if (ev.Player.IsCuffed)
+        {
+            ev.IsAllowed = true;
+        }
+        else
+        {
+            ev.IsAllowed = false;
+        }
+    }
 }

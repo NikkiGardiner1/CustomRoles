@@ -33,6 +33,7 @@ public class ActiveCamo : ActiveAbility
 
     protected override void AbilityUsed(Player player)
     {
+        player.ShowHint("Active Camo Deployed", 5f);
         try
         {
             Log.Debug($"{Name} enabled for {Duration}");

@@ -41,4 +41,8 @@ public class Roles
     {
         new TelepathicChaos(),
     };
+    public List<JuggernautChaos> JuggernautChaos { get; set; } = new()
+    {
+        new JuggernautChaos(),
+    };
 }

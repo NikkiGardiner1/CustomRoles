@@ -14,6 +14,8 @@ public class Martyrdom : PassiveAbility
 
     public override string Description { get; set; } = "Causes the player to explode upon death.";
 
+    public float GrenadeFuseTime { get; set; } = 0.1f;
+
     protected override void SubscribeEvents()
     {
         Player.Dying += OnDying;
@@ -29,6 +31,10 @@ public class Martyrdom : PassiveAbility
     private void OnDying(DyingEventArgs ev)
     {
         if (Check(ev.Player))
-            ((ExplosiveGrenade)Item.Create(ItemType.GrenadeHE)).SpawnActive(ev.Player.Position, ev.Player);
+        {
+            ExplosiveGrenade grenade = (ExplosiveGrenade)Item.Create(ItemType.GrenadeHE);
+            grenade.FuseTime = GrenadeFuseTime;
+            grenade.SpawnActive(ev.Player.Position, ev.Player);
+        }
     }
 }

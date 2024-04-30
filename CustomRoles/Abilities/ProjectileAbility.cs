@@ -32,6 +32,7 @@ public class ProjectileAbility : ActiveAbility
 
     protected override void AbilityUsed(Player player)
     {
+        player.ShowHint("Projectile Activated", 5f);
         Log.Debug("Projectile used.");
         Vector3 target = Vector3.zero;
         if (RunRaycast(player, out RaycastHit hit))

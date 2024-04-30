@@ -34,6 +34,7 @@ public class ChargeAbility : ActiveAbility
 
     protected override void AbilityUsed(Player player)
     {
+        player.ShowHint("Charge Activated", 5f);
         if (RunRaycast(player, out RaycastHit hit))
         {
             Log.Debug($"{player.Nickname} -- {player.Position} - {hit.point}");

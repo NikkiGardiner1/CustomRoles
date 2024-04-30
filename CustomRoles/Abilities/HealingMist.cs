@@ -29,6 +29,7 @@ public class HealingMist : ActiveAbility
 
     protected override void AbilityUsed(Player player)
     {
+        player.ShowHint("Healing Mist Activated", 5f);
         ActivateMist(player);
     }
 

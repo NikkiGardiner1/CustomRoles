@@ -54,6 +54,7 @@ public class Plugin : Plugin<Config>
         Config.RoleConfigs.A7Chaoss.Register();
         Config.RoleConfigs.Flippeds.Register();
         Config.RoleConfigs.TelepathicChaos.Register();
+        Config.RoleConfigs.JuggernautChaos.Register();
 
         foreach (CustomRole role in CustomRole.Registered)
         {
