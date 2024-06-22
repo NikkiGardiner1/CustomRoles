@@ -14,7 +14,7 @@ public class Config : IConfig
     [YamlIgnore]
     public Roles RoleConfigs { get; private set; } = null!;
 
-    [Description("Whether or not debug messages shoudl be shown.")]
+    [Description("Whether or not debug messages should be shown.")]
     public bool Debug { get; set; } = false;
 
     [Description("The folder path where role configs will be stored.")]

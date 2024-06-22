@@ -55,6 +55,7 @@ public class Plugin : Plugin<Config>
         Config.RoleConfigs.Flippeds.Register();
         Config.RoleConfigs.TelepathicChaos.Register();
         Config.RoleConfigs.JuggernautChaos.Register();
+        Config.RoleConfigs.CISpies.Register();
 
         foreach (CustomRole role in CustomRole.Registered)
         {

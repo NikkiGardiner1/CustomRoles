@@ -45,4 +45,8 @@ public class Roles
     {
         new JuggernautChaos(),
     };
+    public List<CISpy> CISpies { get; set; } = new()
+    {
+        new CISpy(),
+    };
 }
