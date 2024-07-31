@@ -1,3 +1,5 @@
+using PluginAPI.Enums;
+
 namespace CustomRoles;
 
 using System;
@@ -20,6 +22,7 @@ using ServerEvents = Exiled.Events.Handlers.Server;
 public class Plugin : Plugin<Config>
 {
     public static Plugin Singleton { get; private set; } = null!;
+    
 
     public Dictionary<StartTeam, List<ICustomRole>> Roles { get; } = new();
 
@@ -31,14 +34,17 @@ public class Plugin : Plugin<Config>
 
     public override string Prefix { get; } = "SFSCustomRoles";
 
-    public override Version RequiredExiledVersion { get; } = new (8, 0, 0);
+    public override Version RequiredExiledVersion { get; } = new (8, 11, 0);
 
     public Methods Methods { get; private set; } = null!;
+
+    public LoadPriority LoadPriority { get; set; } = LoadPriority.Low;
 
     public EventHandlers EventHandlers { get; private set; } = null!;
 
     public override void OnEnabled()
     {
+        LoadPriority = LoadPriority.Low;
         Singleton = this;
         EventHandlers = new EventHandlers(this);
         Methods = new Methods(this);
@@ -56,6 +62,7 @@ public class Plugin : Plugin<Config>
         Config.RoleConfigs.TelepathicChaos.Register();
         Config.RoleConfigs.JuggernautChaos.Register();
         Config.RoleConfigs.CISpies.Register();
+        Config.RoleConfigs.MtfWisps.Register();
 
         foreach (CustomRole role in CustomRole.Registered)
         {

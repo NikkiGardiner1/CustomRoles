@@ -49,4 +49,9 @@ public class Roles
     {
         new CISpy(),
     };
+
+    public List<MtfWisp> MtfWisps { get; set; } = new()
+    {
+        new MtfWisp(),
+    };
 }
