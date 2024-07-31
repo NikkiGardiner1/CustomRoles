@@ -18,6 +18,6 @@ public class RemoveDisguise : ActiveAbility
 
     protected override void AbilityUsed(Player player)
     {
-        player.Role.Set(RoleTypeId.ChaosRifleman, SpawnReason.ForceClass, RoleSpawnFlags.None);
+        player.Role.Set(RoleTypeId.ChaosRifleman, SpawnReason.ForceClass, RoleSpawnFlags.AssignInventory);
     }
 }
