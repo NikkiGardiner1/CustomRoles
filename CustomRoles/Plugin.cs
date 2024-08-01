@@ -1,3 +1,4 @@
+using Exiled.API.Enums;
 using PluginAPI.Enums;
 
 namespace CustomRoles;
@@ -21,9 +22,9 @@ using ServerEvents = Exiled.Events.Handlers.Server;
 
 public class Plugin : Plugin<Config>
 {
+    public override PluginPriority Priority { get; } = PluginPriority.Higher;
     public static Plugin Singleton { get; private set; } = null!;
     
-
     public Dictionary<StartTeam, List<ICustomRole>> Roles { get; } = new();
 
     public List<Player> StopRagdollList { get; } = new ();
@@ -38,13 +39,10 @@ public class Plugin : Plugin<Config>
 
     public Methods Methods { get; private set; } = null!;
 
-    public LoadPriority LoadPriority { get; set; } = LoadPriority.Low;
-
     public EventHandlers EventHandlers { get; private set; } = null!;
 
     public override void OnEnabled()
     {
-        LoadPriority = LoadPriority.Low;
         Singleton = this;
         EventHandlers = new EventHandlers(this);
         Methods = new Methods(this);

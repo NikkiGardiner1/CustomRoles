@@ -1,10 +1,4 @@
-﻿using CustomRoles.API;
-using Exiled.API.Features;
-using Exiled.Events.EventArgs.Player;
-using InventorySystem.Items.Pickups;
-using JetBrains.Annotations;
-
-namespace CustomRoles.Roles;
+﻿namespace CustomRoles.Roles;
 
 using System.Collections.Generic;
 using CustomRoles.Abilities;
@@ -17,6 +11,7 @@ using Exiled.CustomRoles.API.Features;
 using Exiled.Events.EventArgs.Player;
 using Exiled.Events.Handlers;
 using PlayerRoles;
+using JetBrains.Annotations;
 
 [CustomRole(RoleTypeId.NtfSpecialist)]
 public class MtfWisp : CustomRole, ICustomRole
@@ -46,15 +41,8 @@ public class MtfWisp : CustomRole, ICustomRole
     {
         {
             AmmoType.Nato9, 120
-        }
+        },
     };
-
-    [CanBeNull]
-    public override List<CustomAbility> CustomAbilities { get; set; } = new()
-    {
-        new MtfWispEffects()
-    };
-
     public override string Description { get; set; } =
         "A MTF Specialist that has the ability to go through doors and being able to see farther.";
 
@@ -63,6 +51,20 @@ public class MtfWisp : CustomRole, ICustomRole
     public override SpawnProperties SpawnProperties { get; set; } = new()
     {
         Limit = 1,
+        RoleSpawnPoints = new List<RoleSpawnPoint>
+        {
+            new()
+            {
+                Role = RoleTypeId.NtfSpecialist,
+                Chance = 100,
+            },
+        },
+    };
+    
+    [CanBeNull]
+    public override List<CustomAbility> CustomAbilities { get; set; } = new()
+    {
+        new MtfWispEffects(),
     };
 
     protected override void SubscribeEvents()

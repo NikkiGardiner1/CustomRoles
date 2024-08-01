@@ -17,7 +17,7 @@ public class MtfWispEffects : PassiveAbility
         Timing.CallDelayed(2.5f, () =>
         {
             player.EnableEffect(EffectType.Ghostly); 
-            player.EnableEffect(EffectType.FogControl, 0);
+            player.EnableEffect(EffectType.FogControl, 1);
             player.EnableEffect(EffectType.Exhausted);
         });
     }
