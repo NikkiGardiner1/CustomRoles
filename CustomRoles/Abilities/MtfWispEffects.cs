@@ -14,11 +14,11 @@ public class MtfWispEffects : PassiveAbility
 
     protected override void AbilityAdded(Player player)
     {
-        Timing.CallDelayed(2.5f, () =>
+        Timing.CallDelayed(1f, () =>
         {
             player.EnableEffect(EffectType.Ghostly); 
             player.EnableEffect(EffectType.FogControl, 1);
-            player.EnableEffect(EffectType.Exhausted);
+            player.EnableEffect(EffectType.Exhausted, 1);
         });
     }
 
