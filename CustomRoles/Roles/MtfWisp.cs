@@ -2,6 +2,7 @@
 using Exiled.API.Features;
 using Exiled.Events.EventArgs.Player;
 using InventorySystem.Items.Pickups;
+using JetBrains.Annotations;
 
 namespace CustomRoles.Roles;
 
@@ -39,6 +40,19 @@ public class MtfWisp : CustomRole, ICustomRole
         ItemType.Medkit.ToString(),
         ItemType.Radio.ToString(),
         ItemType.ArmorCombat.ToString()
+    };
+
+    public override Dictionary<AmmoType, ushort> Ammo { get; set; } = new()
+    {
+        {
+            AmmoType.Nato9, 120
+        }
+    };
+
+    [CanBeNull]
+    public override List<CustomAbility> CustomAbilities { get; set; } = new()
+    {
+        new MtfWispEffects()
     };
 
     public override string Description { get; set; } =
