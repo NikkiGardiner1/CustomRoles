@@ -2,7 +2,6 @@
 using Exiled.API.Features;
 using Exiled.CustomRoles.API.Features;
 using PlayerRoles;
-using PluginAPI.Roles;
 
 namespace CustomRoles.Abilities;
 
