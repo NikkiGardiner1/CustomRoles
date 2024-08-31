@@ -1,4 +1,6 @@
-﻿namespace CustomRoles.Roles;
+﻿using Exiled.CustomRoles.API;
+
+namespace CustomRoles.Roles;
 
 using CustomRoles.API;
 
@@ -67,13 +69,19 @@ public class ContainmentScientist : CustomRole, ICustomRole
 
     private void OnEscaping(EscapingEventArgs ev)
     {
-        if (ev.Player.IsCuffed)
+        foreach (Exiled.API.Features.Player player in Exiled.API.Features.Player.List)
         {
-            ev.IsAllowed = true;
-        }
-        else
-        {
-            ev.IsAllowed = false;
+            if (CustomRole.Get(Id).Check(player))
+            {
+                if (ev.Player.IsCuffed)
+                {
+                    ev.IsAllowed = true;
+                }
+                else
+                {
+                    ev.IsAllowed = false;
+                }
+            }
         }
     }
 }
