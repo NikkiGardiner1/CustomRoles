@@ -22,7 +22,6 @@ using ServerEvents = Exiled.Events.Handlers.Server;
 
 public class Plugin : Plugin<Config>
 {
-    public override PluginPriority Priority { get; } = PluginPriority.Higher;
     public static Plugin Singleton { get; private set; } = null!;
     
     public Dictionary<StartTeam, List<ICustomRole>> Roles { get; } = new();
