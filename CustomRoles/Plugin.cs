@@ -63,13 +63,13 @@ public class Plugin : Plugin<Config>
 
         foreach (CustomRole role in CustomRole.Registered)
         {
-            if (role.CustomAbilities is not null)
+            /*if (role.CustomAbilities is not null)
             {
                 foreach (CustomAbility ability in role.CustomAbilities)
                 {
                     ability.Register();
                 }
-            }
+            }*/
 
             if (role is ICustomRole custom)
             {

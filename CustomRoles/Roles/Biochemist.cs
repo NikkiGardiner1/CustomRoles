@@ -1,6 +1,5 @@
 ﻿namespace CustomRoles.Roles;
 
-using CustomRoles.Abilities;
 using CustomRoles.API;
 
 using Exiled.API.Features;
@@ -42,11 +41,6 @@ public class Biochemist : CustomRole, ICustomRole
     public override SpawnProperties SpawnProperties { get; set; } = new()
     {
         Limit = 1,
-    };
-    public override List<CustomAbility>? CustomAbilities { get; set; } = new()
-    {
-        new HealingMist(),
-        new Martyrdom(),
     };
     public override List<string> Inventory { get; set; } = new()
     {

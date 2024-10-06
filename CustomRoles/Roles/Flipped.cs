@@ -42,7 +42,7 @@ public class Flipped : CustomRole, ICustomRole
         Limit = 1,
     };
 
-    protected override void RoleAdded(Player player)
+    /*protected override void RoleAdded(Player player)
     {
         Timing.CallDelayed(2.5f, () => player.Scale = new Vector3(1.0f, -1.0f, 1.0f));
     }
@@ -50,5 +50,5 @@ public class Flipped : CustomRole, ICustomRole
     protected override void RoleRemoved(Player player)
     {
         player.Scale = Vector3.one;
-    }
+    }*/
 }

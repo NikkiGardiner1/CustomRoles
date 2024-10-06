@@ -1,6 +1,5 @@
 ﻿namespace CustomRoles.Roles;
 
-using CustomRoles.Abilities;
 using CustomRoles.API;
 
 using Exiled.API.Features;

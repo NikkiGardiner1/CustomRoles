@@ -55,7 +55,7 @@ public class ContainmentScientist : CustomRole, ICustomRole
         ItemType.Radio.ToString(),
     };
 
-    protected override void SubscribeEvents()
+    /*protected override void SubscribeEvents()
     {
         Exiled.Events.Handlers.Player.Escaping += OnEscaping;
         base.SubscribeEvents();
@@ -83,5 +83,5 @@ public class ContainmentScientist : CustomRole, ICustomRole
                 }
             }
         }
-    }
+    }*/
 }

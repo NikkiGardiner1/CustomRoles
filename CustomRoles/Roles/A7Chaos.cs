@@ -1,7 +1,6 @@
 ﻿namespace CustomRoles.Roles;
 
 using System.Collections.Generic;
-using CustomRoles.Abilities;
 using CustomRoles.API;
 
 using Exiled.API.Enums;

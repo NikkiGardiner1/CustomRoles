@@ -1,7 +1,6 @@
 ﻿namespace CustomRoles.Roles;
 
 using System.Collections.Generic;
-using CustomRoles.Abilities;
 using CustomRoles.API;
 
 using Exiled.API.Enums;
@@ -60,14 +59,8 @@ public class MtfWisp : CustomRole, ICustomRole
             },
         },
     };
-    
-    [CanBeNull]
-    public override List<CustomAbility> CustomAbilities { get; set; } = new()
-    {
-        new MtfWispEffects(),
-    };
 
-    protected override void SubscribeEvents()
+    /*protected override void SubscribeEvents()
     {
         Player.PickingUpItem += OnPickingUpItem;
         Player.UsingItem += OnUsingMedicalItem;
@@ -76,7 +69,7 @@ public class MtfWisp : CustomRole, ICustomRole
 
     protected override void UnsubscribeEvents()
     {
-        Player.PickingUpItem -= OnPickingUpItem;
+        //Player.PickingUpItem -= OnPickingUpItem;
         Player.UsingItem -= OnUsingMedicalItem;
         base.UnsubscribeEvents();
     }
@@ -90,5 +83,5 @@ public class MtfWisp : CustomRole, ICustomRole
     {
         if (Check(ev.Player) && ev.Pickup.Type == ItemType.Adrenaline)
             ev.IsAllowed = false;
-    }
+    }*/
 }

@@ -1,7 +1,6 @@
 ﻿namespace CustomRoles.Roles;
 
 using System.Collections.Generic;
-using CustomRoles.Abilities;
 using CustomRoles.API;
 
 using Exiled.API.Enums;
@@ -60,7 +59,7 @@ public class Nightfall : CustomRole, ICustomRole
         },
     };
 
-    protected override void SubscribeEvents()
+    /*protected override void SubscribeEvents()
     {
         Player.DroppingItem += OnDroppingItem;
         Player.PickingUpItem += OnPickingUpItem;
@@ -130,5 +129,5 @@ public class Nightfall : CustomRole, ICustomRole
             ev.IsAllowed = false;
         if (Check(ev.Player) && ev.Item.Type == ItemType.GunShotgun)
             ev.IsAllowed = false;
-    }
+    }*/
 }

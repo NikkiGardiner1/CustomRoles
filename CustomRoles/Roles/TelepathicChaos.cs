@@ -1,7 +1,6 @@
 ﻿namespace CustomRoles.Roles;
 
 using System.Collections.Generic;
-using CustomRoles.Abilities;
 using CustomRoles.API;
 
 using Exiled.API.Enums;
@@ -58,10 +57,5 @@ public class TelepathicChaos : CustomRole, ICustomRole
         {
             AmmoType.Nato762, 120
         },
-    };
-
-    public override List<CustomAbility>? CustomAbilities { get; set; } = new()
-    {
-        new Detect(),
     };
 }
