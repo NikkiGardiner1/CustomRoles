@@ -37,6 +37,9 @@
       <Reference Include="Mirror">
         <HintPath>$(EXILED_REFERENCES)\Mirror.dll</HintPath>
       </Reference>
+      <Reference Include="SnivysCustomRolesAbilities">
+        <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\SCP Secret Laboratory Dedicated Server\SCPSL_Data\Managed\SnivysCustomRolesAbilities.dll</HintPath>
+      </Reference>
       <Reference Include="UnityEngine">
         <HintPath>$(EXILED_REFERENCES)\UnityEngine.dll</HintPath>
       </Reference>

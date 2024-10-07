@@ -1,4 +1,6 @@
-﻿namespace CustomRoles.Roles;
+﻿using SnivysCustomRolesAbilities.Abilities;
+
+namespace CustomRoles.Roles;
 
 using System.Collections.Generic;
 using CustomRoles.API;
@@ -47,6 +49,12 @@ public class CISpy : CustomRole, ICustomRole
                 Chance = 100,
             },
         },
+    };
+    
+    public override List<CustomAbility>? CustomAbilities { get; set; } = new()
+    {
+        new Disguised(),
+        new RemoveDisguise(),
     };
 
     protected override void SubscribeEvents()

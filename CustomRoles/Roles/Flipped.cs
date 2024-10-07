@@ -1,4 +1,7 @@
-﻿namespace CustomRoles.Roles;
+﻿using System.Collections.Generic;
+using SnivysCustomRolesAbilities.Abilities;
+
+namespace CustomRoles.Roles;
 
 using CustomRoles.API;
 
@@ -42,13 +45,8 @@ public class Flipped : CustomRole, ICustomRole
         Limit = 1,
     };
 
-    /*protected override void RoleAdded(Player player)
+     public override List<CustomAbility>? CustomAbilities { get; set; } = new()
     {
-        Timing.CallDelayed(2.5f, () => player.Scale = new Vector3(1.0f, -1.0f, 1.0f));
-    }
-
-    protected override void RoleRemoved(Player player)
-    {
-        player.Scale = Vector3.one;
-    }*/
+        new SnivysCustomRolesAbilities.Abilities.Flipped(),
+    };
 }

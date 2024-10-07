@@ -1,4 +1,6 @@
-﻿namespace CustomRoles.Roles;
+﻿using SnivysCustomRolesAbilities.Abilities;
+
+namespace CustomRoles.Roles;
 
 using System.Collections.Generic;
 using CustomRoles.API;
@@ -60,28 +62,8 @@ public class MtfWisp : CustomRole, ICustomRole
         },
     };
 
-    /*protected override void SubscribeEvents()
+    public override List<CustomAbility>? CustomAbilities { get; set; } = new()
     {
-        Player.PickingUpItem += OnPickingUpItem;
-        Player.UsingItem += OnUsingMedicalItem;
-        base.SubscribeEvents();
-    }
-
-    protected override void UnsubscribeEvents()
-    {
-        //Player.PickingUpItem -= OnPickingUpItem;
-        Player.UsingItem -= OnUsingMedicalItem;
-        base.UnsubscribeEvents();
-    }
-    private void OnUsingMedicalItem(UsingItemEventArgs ev)
-    {
-        if (Check(ev.Player) && ev.Item.Type == ItemType.Adrenaline)
-            ev.IsAllowed = false;
-    }
-
-    private void OnPickingUpItem(PickingUpItemEventArgs ev)
-    {
-        if (Check(ev.Player) && ev.Pickup.Type == ItemType.Adrenaline)
-            ev.IsAllowed = false;
-    }*/
+        new Wisp(),
+    };
 }

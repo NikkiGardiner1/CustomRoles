@@ -1,4 +1,6 @@
-﻿namespace CustomRoles.Roles;
+﻿using SnivysCustomRolesAbilities.Abilities;
+
+namespace CustomRoles.Roles;
 
 using CustomRoles.API;
 
@@ -47,5 +49,10 @@ public class Biochemist : CustomRole, ICustomRole
         ItemType.Medkit.ToString(),
         ItemType.Adrenaline.ToString(),
         ItemType.Radio.ToString(),
+    };
+    public override List<CustomAbility>? CustomAbilities { get; set; } = new()
+    {
+        new HealingMist(),
+        new Martyrdom(),
     };
 }

@@ -1,4 +1,6 @@
-﻿namespace CustomRoles.Roles;
+﻿using SnivysCustomRolesAbilities.Abilities;
+
+namespace CustomRoles.Roles;
 
 using System.Collections.Generic;
 using CustomRoles.API;
@@ -57,5 +59,9 @@ public class TelepathicChaos : CustomRole, ICustomRole
         {
             AmmoType.Nato762, 120
         },
+    };
+    public override List<CustomAbility>? CustomAbilities { get; set; } = new()
+    {
+        new Detect(),
     };
 }

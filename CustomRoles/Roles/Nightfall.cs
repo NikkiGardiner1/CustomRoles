@@ -1,4 +1,6 @@
-﻿namespace CustomRoles.Roles;
+﻿using SnivysCustomRolesAbilities.Abilities;
+
+namespace CustomRoles.Roles;
 
 using System.Collections.Generic;
 using CustomRoles.API;
@@ -59,75 +61,8 @@ public class Nightfall : CustomRole, ICustomRole
         },
     };
 
-    /*protected override void SubscribeEvents()
+    public override List<CustomAbility>? CustomAbilities { get; set; } = new()
     {
-        Player.DroppingItem += OnDroppingItem;
-        Player.PickingUpItem += OnPickingUpItem;
-        Player.UsingItem += OnUsingMedicalItem;
-        base.SubscribeEvents();
-    }
-
-    protected override void UnsubscribeEvents()
-    {
-        Player.DroppingItem -= OnDroppingItem;
-        Player.PickingUpItem -= OnPickingUpItem;
-        Player.UsingItem -= OnUsingMedicalItem;
-        base.UnsubscribeEvents();
-    }
-
-    private void OnUsingMedicalItem(UsingItemEventArgs ev)
-    {
-        if (Check(ev.Player) && ev.Item.Type == ItemType.Medkit)
-            ev.IsAllowed = false;
-        if (Check(ev.Player) && ev.Item.Type == ItemType.Painkillers)
-            ev.IsAllowed = false;
-    }
-
-    private void OnPickingUpItem(PickingUpItemEventArgs ev)
-    {
-        if (Check(ev.Player) && ev.Pickup.Type == ItemType.SCP500)
-            ev.IsAllowed = false;
-        if (Check(ev.Player) && ev.Pickup.Type == ItemType.Medkit)
-            ev.IsAllowed = false;
-        if (Check(ev.Player) && ev.Pickup.Type == ItemType.Painkillers)
-            ev.IsAllowed = false;
-        if (Check(ev.Player) && ev.Pickup.Type == ItemType.KeycardO5)
-            ev.IsAllowed = false;
-        if (Check(ev.Player) && ev.Pickup.Type == ItemType.GunE11SR)
-            ev.IsAllowed = false;
-        if (Check(ev.Player) && ev.Pickup.Type == ItemType.GunCrossvec)
-            ev.IsAllowed = false;
-        if (Check(ev.Player) && ev.Pickup.Type == ItemType.GunFSP9)
-            ev.IsAllowed = false;
-        if (Check(ev.Player) && ev.Pickup.Type == ItemType.GunLogicer)
-            ev.IsAllowed = false;
-        if (Check(ev.Player) && ev.Pickup.Type == ItemType.GunAK)
-            ev.IsAllowed = false;
-        if (Check(ev.Player) && ev.Pickup.Type == ItemType.GunShotgun)
-            ev.IsAllowed = false;
-    }
-
-    private void OnDroppingItem(DroppingItemEventArgs ev)
-    {
-        if (Check(ev.Player) && ev.Item.Type == ItemType.SCP500)
-            ev.IsAllowed = false;
-        if (Check(ev.Player) && ev.Item.Type == ItemType.Medkit)
-            ev.IsAllowed = false;
-        if (Check(ev.Player) && ev.Item.Type == ItemType.Painkillers)
-            ev.IsAllowed = false;
-        if (Check(ev.Player) && ev.Item.Type == ItemType.KeycardO5)
-            ev.IsAllowed = false;
-        if (Check(ev.Player) && ev.Item.Type == ItemType.GunE11SR)
-            ev.IsAllowed = false;
-        if (Check(ev.Player) && ev.Item.Type == ItemType.GunCrossvec)
-            ev.IsAllowed = false;
-        if (Check(ev.Player) && ev.Item.Type == ItemType.GunFSP9)
-            ev.IsAllowed = false;
-        if (Check(ev.Player) && ev.Item.Type == ItemType.GunLogicer)
-            ev.IsAllowed = false;
-        if (Check(ev.Player) && ev.Item.Type == ItemType.GunAK)
-            ev.IsAllowed = false;
-        if (Check(ev.Player) && ev.Item.Type == ItemType.GunShotgun)
-            ev.IsAllowed = false;
-    }*/
+        new NightfallAbility(),
+    };
 }

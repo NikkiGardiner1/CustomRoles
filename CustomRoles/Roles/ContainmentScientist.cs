@@ -1,4 +1,5 @@
 ﻿using Exiled.CustomRoles.API;
+using SnivysCustomRolesAbilities.Abilities;
 
 namespace CustomRoles.Roles;
 
@@ -55,33 +56,8 @@ public class ContainmentScientist : CustomRole, ICustomRole
         ItemType.Radio.ToString(),
     };
 
-    /*protected override void SubscribeEvents()
+    public override List<CustomAbility>? CustomAbilities { get; set; } = new()
     {
-        Exiled.Events.Handlers.Player.Escaping += OnEscaping;
-        base.SubscribeEvents();
-    }
-
-    protected override void UnsubscribeEvents()
-    {
-        Exiled.Events.Handlers.Player.Escaping -= OnEscaping;
-        base.UnsubscribeEvents();
-    }
-
-    private void OnEscaping(EscapingEventArgs ev)
-    {
-        foreach (Exiled.API.Features.Player player in Exiled.API.Features.Player.List)
-        {
-            if (CustomRole.Get(Id).Check(player))
-            {
-                if (ev.Player.IsCuffed)
-                {
-                    ev.IsAllowed = true;
-                }
-                else
-                {
-                    ev.IsAllowed = false;
-                }
-            }
-        }
-    }*/
+        new RestrictedEscape(),
+    };
 }

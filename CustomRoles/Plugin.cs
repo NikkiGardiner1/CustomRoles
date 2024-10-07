@@ -34,7 +34,7 @@ public class Plugin : Plugin<Config>
 
     public override string Prefix { get; } = "SFSCustomRoles";
 
-    public override Version RequiredExiledVersion { get; } = new (8, 11, 0);
+    public override Version RequiredExiledVersion { get; } = new (8, 12, 2);
     public Methods Methods { get; private set; } = null!;
 
     public EventHandlers EventHandlers { get; private set; } = null!;
