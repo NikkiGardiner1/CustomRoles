@@ -10,11 +10,15 @@ Below is a table of all the current custom roles, followed by a breif descriptio
 
 RoleName | RoleID | Abilities | Spawn Type | Description
 :---: | :---: | :---: | :---: | :------
-Containment Engineer | 30 | None | Immediately when a round begins | A Scientist is randomly selected and is set into Enterance Zone with a Containment Engineer Keycard.
+Containment Engineer | 30 | Restricted Escape | Immediately when a round begins | A Scientist is randomly selected and is set into Enterance Zone with a Containment Engineer Keycard.
 Protocol Enforcer | 31 | None | Immediately when a round begins | A lighter facility guard that spawns in light containment zone. They spawn with a Tranquilizer, Medkit, Painkillers, Radio, Light Armor, and a Zone Manager Keycard.
 Biochemist| 32 | Healing Mist, Martyrdom | Immediately when a round begins | A Scientist genetically altered.
 Containment Guard | 33 | None | Immediately when a round begins | A Facility Guard specializing in recontaining SCPs
 Border Patrol | 34 | None | Given by Admin Command only | A facility guard specialized in ensuring safe passage from Enterance and Heavy Checkpoints
 Nightfall | 35 | Data Missing | Data Missing | Data Missing
 A7 Chaos | 36 | None | During a Chaos Insurgency Respawn Wave | A Chaos Member that spawns with an A7
-Flipped | 37 | None | Given by Admin Command only | For those people who complains about dwarfs when they spawn in as it
+Flipped | 37 | Flipped | Given by Admin Command only | For those people who complains about dwarfs when they spawn in as it
+Telepathic Chaos | 38 | Detect | During a Chaos Insurgency Respawn Wave | A Chaos Member that can detect hostiles to the Chaos Insurgency near by
+Juggernaut Chaos | 39 | Give Candy Ability | During a Chaos Insurgency Respawn Wave | A Chaos Member that specializes in explosives
+Chaos Insurgency Spy | 40 | Disguised, Remove Disguise | During a MTF Respawn Wave | A Chaos Member that is disguised as an MTF Member
+MTF Wisp | 41 | Wisp | During a MTF Respawn Wave | A MTF Member that can go through doors, but has reduced sprint and some item limitations
