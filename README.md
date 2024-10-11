@@ -3,7 +3,7 @@
 ## Description
 This plugin makes use of Exiled.CustomRoles to add new playable roles into the game. These roles have custom inventories, health, objectives and abilities.
 
-This plugin used some code from Joker's CustomRoles plugin, such as abilities. All credit goes to him in regards to that
+This plugin requires [My own custom roles ability plugin](https://github.com/SnivyFilms/SnivysCustomRolesAbilities)
 
 ### Role List
 Below is a table of all the current custom roles, followed by a breif description of them. Many of them rely on special abilities also added by this plugin, refer to the list of abilities for more details about what each does.
