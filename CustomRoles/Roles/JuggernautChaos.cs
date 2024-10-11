@@ -1,4 +1,6 @@
-﻿namespace CustomRoles.Roles;
+﻿using SnivysCustomRolesAbilities.Abilities;
+
+namespace CustomRoles.Roles;
 
 using System.Collections.Generic;
 using CustomRoles.API;
@@ -46,11 +48,6 @@ public class JuggernautChaos : CustomRole, ICustomRole
         },
     };
 
-    protected override void RoleAdded(Exiled.API.Features.Player player)
-    {
-        Timing.CallDelayed(1.0f, () => player.TryAddCandy(CandyKindID.Pink));
-    }
-
     public override List<string> Inventory { get; set; } = new()
     {
         $"{ItemType.KeycardChaosInsurgency}",
@@ -58,5 +55,10 @@ public class JuggernautChaos : CustomRole, ICustomRole
         $"{ItemType.GrenadeHE}",
         $"{ItemType.GrenadeHE}",
         $"{ItemType.ArmorCombat}",
+    };
+    
+    public override List<CustomAbility>? CustomAbilities { get; set; } = new()
+    {
+        new GivingCandyAbility(),
     };
 }

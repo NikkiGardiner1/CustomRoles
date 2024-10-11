@@ -57,7 +57,7 @@ public class CISpy : CustomRole, ICustomRole
         new RemoveDisguise(),
     };
 
-    protected override void SubscribeEvents()
+    /*protected override void SubscribeEvents()
     {
         PlayerEvent.Hurting += OnHurting;
         PlayerEvent.Shooting += OnShooting;
@@ -73,7 +73,7 @@ public class CISpy : CustomRole, ICustomRole
         base.UnsubscribeEvents();
     }
 
-    private void OnHurting(HurtingEventArgs ev)
+    /private void OnHurting(HurtingEventArgs ev)
     {
         if (ev.Attacker is null) return;
         if ((Check(ev.Player) || Check(ev.Attacker)) && (ev.Player.IsCHI || ev.Attacker.IsCHI))
@@ -92,5 +92,5 @@ public class CISpy : CustomRole, ICustomRole
         {
             ev.IsAllowed = false;
         }
-    }
+    }*/
 }
