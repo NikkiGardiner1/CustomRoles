@@ -64,6 +64,14 @@ public class MtfWisp : CustomRole, ICustomRole
 
     public override List<CustomAbility>? CustomAbilities { get; set; } = new()
     {
+        new RestrictedItems
+        {
+            RestrictedItemList =
+            {
+                ItemType.Adrenaline,
+                ItemType.SCP500
+            }
+        },
         new Wisp(),
     };
 }

@@ -1,16 +1,11 @@
-namespace CustomRoles.Roles;
-
+using System.Collections.Generic;
 using CustomRoles.API;
-
-using Exiled.API.Features;
 using Exiled.API.Features.Attributes;
 using Exiled.API.Features.Spawn;
 using Exiled.CustomRoles.API.Features;
-
-using MEC;
 using PlayerRoles;
-using System.Collections.Generic;
-using UnityEngine;
+
+namespace SnivyCustomRoles.Roles;
 
 [CustomRole(RoleTypeId.None)]
 public class LightGuard : CustomRole, ICustomRole

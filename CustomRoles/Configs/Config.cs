@@ -1,13 +1,11 @@
-namespace CustomRoles.Configs;
-
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.IO;
 using Exiled.API.Features;
 using Exiled.API.Interfaces;
 using Exiled.Loader;
-
 using YamlDotNet.Serialization;
+
+namespace SnivyCustomRoles.Configs;
 
 public class Config : IConfig
 {

@@ -1,20 +1,12 @@
-﻿using SnivysCustomRolesAbilities.Abilities;
-
-namespace CustomRoles.Roles;
-
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using CustomRoles.API;
-
-using Exiled.API.Features;
 using Exiled.API.Features.Attributes;
 using Exiled.API.Features.Spawn;
 using Exiled.CustomRoles.API.Features;
-using Exiled.Events.EventArgs.Player;
-using Exiled.Events.Handlers;
-using Exiled.Events.EventArgs.Scp330;
-using InventorySystem.Items.Usables.Scp330;
-using MEC;
 using PlayerRoles;
+using SnivysCustomRolesAbilities.Abilities;
+
+namespace SnivyCustomRoles.Roles;
 
 [CustomRole(RoleTypeId.ChaosConscript)]
 public class JuggernautChaos : CustomRole, ICustomRole

@@ -1,7 +1,8 @@
-namespace CustomRoles.Configs;
-
 using System.Collections.Generic;
 using CustomRoles.Roles;
+using SnivyCustomRoles.Roles;
+
+namespace SnivyCustomRoles.Configs;
 
 public class Roles
 {

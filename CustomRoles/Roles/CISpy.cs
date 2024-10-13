@@ -1,21 +1,12 @@
-﻿using SnivysCustomRolesAbilities.Abilities;
-
-namespace CustomRoles.Roles;
-
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using CustomRoles.API;
-
-using Exiled.API.Enums;
 using Exiled.API.Features.Attributes;
 using Exiled.API.Features.Spawn;
 using Exiled.CustomRoles.API.Features;
-using Exiled.Events.EventArgs.Interfaces;
-using Exiled.Events.EventArgs.Player;
-using Exiled.Events.Handlers;
-using PlayerEvent = Exiled.Events.Handlers.Player;
 using PlayerRoles;
-using System.ComponentModel;
-using Exiled.API.Features.Core.Generic;
+using SnivysCustomRolesAbilities.Abilities;
+
+namespace SnivyCustomRoles.Roles;
 
 [CustomRole(RoleTypeId.ChaosConscript)]
 public class CISpy : CustomRole, ICustomRole
@@ -56,41 +47,4 @@ public class CISpy : CustomRole, ICustomRole
         new Disguised(),
         new RemoveDisguise(),
     };
-
-    /*protected override void SubscribeEvents()
-    {
-        PlayerEvent.Hurting += OnHurting;
-        PlayerEvent.Shooting += OnShooting;
-
-        base.SubscribeEvents();
-    }
-
-    protected override void UnsubscribeEvents()
-    {
-        PlayerEvent.Hurting -= OnHurting;
-        PlayerEvent.Shooting -= OnShooting;
-
-        base.UnsubscribeEvents();
-    }
-
-    /private void OnHurting(HurtingEventArgs ev)
-    {
-        if (ev.Attacker is null) return;
-        if ((Check(ev.Player) || Check(ev.Attacker)) && (ev.Player.IsCHI || ev.Attacker.IsCHI))
-        {
-            ev.Attacker.Broadcast(new Exiled.API.Features.Broadcast("<color=red>That MTF is a CI Spy</color>", 5));
-            ev.IsAllowed = false;
-        }   
-    }
-
-    private void OnShooting(ShootingEventArgs ev)
-    {
-        Exiled.API.Features.Player target = Exiled.API.Features.Player.Get(ev.TargetNetId);
-        if (target != null && target.Role == RoleTypeId.ClassD && Check(ev.Player) || target != null && target.Role == RoleTypeId.ChaosConscript && Check(ev.Player)
-            || target != null && target.Role == RoleTypeId.ChaosRepressor && Check(ev.Player) || target != null && target.Role == RoleTypeId.ChaosMarauder && Check(ev.Player)
-            || target != null && target.Role == RoleTypeId.ChaosRifleman && Check(ev.Player))
-        {
-            ev.IsAllowed = false;
-        }
-    }*/
 }

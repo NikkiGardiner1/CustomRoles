@@ -1,21 +1,12 @@
-﻿using Exiled.CustomRoles.API;
-using SnivysCustomRolesAbilities.Abilities;
-
-namespace CustomRoles.Roles;
-
+﻿using System.Collections.Generic;
 using CustomRoles.API;
-
-using Exiled.API.Features;
 using Exiled.API.Features.Attributes;
 using Exiled.API.Features.Spawn;
 using Exiled.CustomRoles.API.Features;
-using Exiled.Events.EventArgs.Player;
-using Exiled.Events.Handlers;
-
-using MEC;
 using PlayerRoles;
-using System.Collections.Generic;
-using UnityEngine;
+using SnivysCustomRolesAbilities.Abilities;
+
+namespace SnivyCustomRoles.Roles;
 
 [CustomRole(RoleTypeId.Scientist)]
 public class ContainmentScientist : CustomRole, ICustomRole

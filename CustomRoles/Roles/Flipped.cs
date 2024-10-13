@@ -30,7 +30,7 @@ public class Flipped : CustomRole, ICustomRole
     public override string Name { get; set; } = "Flipped";
 
     public override string Description { get; set; } =
-        "For the people who compains that being small is boring";
+        "For the people who complains that being small is boring";
 
     public override string CustomInfo { get; set; } = "Flipped";
 

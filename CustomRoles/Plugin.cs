@@ -1,5 +1,6 @@
 using Exiled.API.Enums;
 using PluginAPI.Enums;
+using SnivyCustomRoles.Configs;
 
 namespace CustomRoles;
 
@@ -14,7 +15,7 @@ using Exiled.CustomRoles.API.Features;
 
 using PlayerRoles;
 
-using Config = Configs.Config;
+using Config = Config;
 using CustomRole = Exiled.CustomRoles.API.Features.CustomRole;
 using PlayerEvents = Exiled.Events.Handlers.Player;
 using Scp049Events = Exiled.Events.Handlers.Scp049;

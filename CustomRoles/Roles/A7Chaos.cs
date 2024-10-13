@@ -1,15 +1,12 @@
-﻿namespace CustomRoles.Roles;
-
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using CustomRoles.API;
-
 using Exiled.API.Enums;
 using Exiled.API.Features.Attributes;
 using Exiled.API.Features.Spawn;
 using Exiled.CustomRoles.API.Features;
-using Exiled.Events.EventArgs.Player;
-using Exiled.Events.Handlers;
 using PlayerRoles;
+
+namespace SnivyCustomRoles.Roles;
 
 [CustomRole(RoleTypeId.ChaosConscript)]
 public class A7Chaos : CustomRole, ICustomRole
