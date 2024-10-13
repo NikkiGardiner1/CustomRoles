@@ -70,7 +70,10 @@ public class MtfWisp : CustomRole, ICustomRole
             {
                 ItemType.Adrenaline,
                 ItemType.SCP500
-            }
+            },
+            RestrictUsingItems = true,
+            RestrictPickingUpItems = true,
+            RestrictDroppingItems = false
         },
         new Wisp(),
     };

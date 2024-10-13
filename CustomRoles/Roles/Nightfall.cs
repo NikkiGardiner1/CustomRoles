@@ -73,7 +73,10 @@ public class Nightfall : CustomRole, ICustomRole
                 ItemType.GunLogicer,
                 ItemType.GunAK,
                 ItemType.GunShotgun
-            }
+            },
+            RestrictUsingItems = true,
+            RestrictDroppingItems = true,
+            RestrictPickingUpItems = true
         }
     };
 }
