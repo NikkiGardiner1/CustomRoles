@@ -12,7 +12,7 @@ RoleName | RoleID | Abilities | Spawn Type | Description
 :---: | :---: | :---: | :---: | :------
 Containment Engineer | 30 | Restricted Escape | Immediately when a round begins | A Scientist is randomly selected and is set into Enterance Zone with a Containment Engineer Keycard.
 Protocol Enforcer | 31 | None | Immediately when a round begins | A lighter facility guard that spawns in light containment zone. They spawn with a Tranquilizer, Medkit, Painkillers, Radio, Light Armor, and a Zone Manager Keycard.
-Biochemist| 32 | Healing Mist, Martyrdom | Immediately when a round begins | A Scientist genetically altered.
+Biochemist| 32 | Healing Mist, Martyrdom, CustomRoleEscape | Immediately when a round begins | A Scientist genetically altered.
 Containment Guard | 33 | None | Immediately when a round begins | A Facility Guard specializing in recontaining SCPs
 Border Patrol | 34 | None | Given by Admin Command only | A facility guard specialized in ensuring safe passage from Enterance and Heavy Checkpoints
 Nightfall | 35 | Data Missing | Data Missing | Data Missing
