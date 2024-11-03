@@ -50,6 +50,13 @@ public class Biochemist : CustomRole, ICustomRole
         {
             ExplosiveFuse = 0.1f
         },
+        new CustomRoleEscape
+        {
+            CuffedEscapeCustomRole = "Juggernaut Chaos",
+            AllowUncuffedCustomRoleChange = false,
+            AllowCuffedCustomRoleChange = true,
+            SaveInventory = true
+        },
         new HealingMist(),
     };
 }
