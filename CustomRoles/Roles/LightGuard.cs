@@ -36,6 +36,14 @@ public class LightGuard : CustomRole, ICustomRole
     public override SpawnProperties SpawnProperties { get; set; } = new()
     {
         Limit = 1,
+        RoleSpawnPoints = new List<RoleSpawnPoint>
+        {
+            new()
+            {
+                Role = RoleTypeId.Scientist,
+                Chance = 100,
+            },
+        },
     };
 
     public override List<string> Inventory { get; set; } = new()
