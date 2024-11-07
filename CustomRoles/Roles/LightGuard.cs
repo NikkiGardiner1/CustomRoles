@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using CustomRoles.API;
+using Exiled.API.Enums;
 using Exiled.API.Features.Attributes;
 using Exiled.API.Features.Spawn;
 using Exiled.CustomRoles.API.Features;
@@ -54,5 +55,11 @@ public class LightGuard : CustomRole, ICustomRole
         ItemType.Painkillers.ToString(),
         ItemType.Radio.ToString(),
         ItemType.ArmorLight.ToString(),
+    };
+    public override Dictionary<AmmoType, ushort> Ammo { get; set; } = new()
+    {
+        {
+            AmmoType.Nato9, 10
+        },
     };
 }
