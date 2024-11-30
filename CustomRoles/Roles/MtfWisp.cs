@@ -28,6 +28,11 @@ public class MtfWisp : CustomRole, ICustomRole
     public override int MaxHealth { get; set; } = 100;
 
     public override string Name { get; set; } = "MTF Wisp";
+    
+    public override string Description { get; set; } =
+        "A MTF Specialist that has the ability to go through doors and being able to see farther.";
+
+    public override string CustomInfo { get; set; } = "MTF Wisp";
 
     public override List<string> Inventory { get; set; } = new()
     {
@@ -41,13 +46,12 @@ public class MtfWisp : CustomRole, ICustomRole
     public override Dictionary<AmmoType, ushort> Ammo { get; set; } = new()
     {
         {
-            AmmoType.Nato9, 120
+            AmmoType.Nato9, 80
         },
+        {
+            AmmoType.Ammo44Cal, 12
+        }
     };
-    public override string Description { get; set; } =
-        "A MTF Specialist that has the ability to go through doors and being able to see farther.";
-
-    public override string CustomInfo { get; set; } = "MTF Wisp";
 
     public override SpawnProperties SpawnProperties { get; set; } = new()
     {

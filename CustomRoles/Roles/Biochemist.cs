@@ -46,10 +46,17 @@ public class Biochemist : CustomRole, ICustomRole
     };
     public override List<CustomAbility>? CustomAbilities { get; set; } = new()
     {
-        new HealingMist(),
         new Martyrdom
         {
             ExplosiveFuse = 0.1f
-        }
+        },
+        new CustomRoleEscape
+        {
+            CuffedEscapeCustomRole = "Juggernaut Chaos",
+            AllowUncuffedCustomRoleChange = false,
+            AllowCuffedCustomRoleChange = true,
+            SaveInventory = true
+        },
+        new HealingMist(),
     };
 }
